@@ -116,7 +116,7 @@ MIT License
 
 👨‍💻 Author
 
-Developed by Ravichandran
+Developed by Divyadharshini
 
 ⭐ Support
 
