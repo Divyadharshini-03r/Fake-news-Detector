@@ -37,7 +37,7 @@ truth-guard-ai-main/
 │── tailwind.config.ts
 ⚙️ Installation
 1️⃣ Clone Repository
-git clone https://github.com/your-username/fake-news-detector.git
+git clone https://github.com/Divyadharshini-03r/fake-news-detector.git
 cd fake-news-detector
 2️⃣ Install Dependencies
 npm install
