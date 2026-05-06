@@ -1,123 +1,172 @@
-# 🛡️ Fake News Detector (TruthLens)
+# 📰 Fake News Detector
 
-A modern web application that helps users detect potentially fake or misleading news articles using an intelligent heuristic-based analysis engine.
-
-This project analyzes article content and checks multiple trust factors such as:
-
-- Clickbait headlines
-- Emotional manipulation
-- Source reliability
-- Content quality
-- Overall credibility score
+A machine learning–powered web application that detects whether a news article is **real or fake** based on its content. The system uses Natural Language Processing (NLP) techniques and trained models to classify news text with high accuracy.
 
 ---
 
-## 🚀 Live Features
+## 🚀 Overview
 
-✅ Detect fake news before it spreads  
-✅ Analyze article text instantly  
-✅ Clean and responsive UI  
-✅ Dashboard with credibility score  
-✅ Login page included  
-✅ Built with modern React + TypeScript stack
+The Fake News Detector helps users verify the authenticity of news articles by analyzing textual patterns. It leverages **machine learning models** trained on labeled datasets to classify news as:
 
-📂 Project Structure
-truth-guard-ai-main/
-│── src/
-│   ├── components/
-│   ├── pages/
-│   ├── lib/
-│   │   └── fakeNewsAnalyzer.ts
-│   ├── integrations/
-│   └── main.tsx
+* ✅ Real News
+* ❌ Fake News
+
+This project demonstrates the practical use of **AI in misinformation detection**, which is crucial in today’s digital world.
+
+---
+
+## ✨ Features
+
+* 🧠 **ML-based Text Classification**
+* 📄 **Input News Content for Prediction**
+* ⚡ **Fast and Lightweight UI**
+* 📊 **Pre-trained Model Integration**
+* 🔍 **Text Preprocessing (Cleaning, Tokenization)**
+* 💡 **Simple and User-Friendly Interface**
+
+---
+
+## 🛠️ Tech Stack
+
+### Machine Learning
+
+* Python
+* Scikit-learn
+* Pandas
+* NumPy
+
+### NLP
+
+* TF-IDF Vectorization / Count Vectorizer
+* Text preprocessing (stopword removal, stemming/lemmatization)
+
+### Frontend / Interface
+
+* HTML, CSS
+* JavaScript (if used)
+* (Optional) Flask / Streamlit (based on your project)
+
+---
+
+## 📂 Project Structure
+
+```id="l3kd9x"
+Fake-news-Detector/
 │
-│── public/
-│── package.json
-│── vite.config.ts
-│── tailwind.config.ts
-⚙️ Installation
-1️⃣ Clone Repository
+├── model/                # Trained ML model files (.pkl)
+├── dataset/              # Training datasets
+├── app.py / main.py      # Main application file
+├── utils.py              # Helper functions (if present)
+├── static/               # CSS / JS files
+├── templates/            # HTML templates (if Flask)
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash id="p1x8f2"
 git clone https://github.com/Divyadharshini-03r/fake-news-detector.git
 cd fake-news-detector
-2️⃣ Install Dependencies
-npm install
-3️⃣ Run Project
-npm run dev
+```
 
-Now open:
+---
 
-http://localhost:5173
-🧠 How It Works
+### 2️⃣ Create Virtual Environment (Recommended)
 
-The app uses a custom fake news analyzer that checks:
+```bash id="q2k7lm"
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+```
 
-🔹 Attention Grabbing Content
+---
 
-Detects words like:
+### 3️⃣ Install Dependencies
 
-Shocking
-Breaking
-Exclusive
-Miracle
-🔹 Emotional Tone
+```bash id="x9s7vd"
+pip install -r requirements.txt
+```
 
-Detects emotional trigger words:
+---
 
-Fury
-Panic
-Hate
-Worst Ever
-🔹 Source Reliability
+### 4️⃣ Run the Application
 
-Checks trusted domains like:
+If using Flask:
 
-Reuters
-BBC
-AP News
-Nature
-🔹 Content Quality
+```bash id="c8mz21"
+python app.py
+```
 
-Measures writing quality and suspicious patterns.
+If using Streamlit:
 
-📊 Output Example
-Overall Score: 82%
+```bash id="y7rt52"
+streamlit run app.py
+```
 
-Verdict: Likely Real News
+---
 
-or
+## 🧪 How It Works
 
-Overall Score: 28%
+1. User enters a news article
+2. Text is preprocessed (cleaning, stopword removal)
+3. Converted into numerical vectors using TF-IDF
+4. Passed into trained ML model
+5. Output: **Real or Fake**
 
-Verdict: Likely Fake News
-🧪 Available Scripts
-npm run dev       # Start development server
-npm run build     # Build production version
-npm run preview   # Preview production build
-npm run test      # Run tests
-🌟 Future Improvements
-AI / ML based fake news detection
-NLP sentiment analysis
-Chrome extension
-Real-time fact checking API
-Multi-language support
-🤝 Contributing
+---
 
-Pull requests are welcome.
+## 📊 Model Details
 
-If you'd like to improve this project:
+* Algorithm used: *(e.g., Logistic Regression / Naive Bayes / SVM — update if needed)*
+* Vectorization: TF-IDF
+* Training dataset: Public fake news datasets (e.g., Kaggle)
 
-Fork repository
-Create branch
-Commit changes
-Open PR
-📜 License
+---
 
-MIT License
+## 🔮 Future Enhancements
 
-👨‍💻 Author
+* 🌐 URL-based news verification
+* 📱 Mobile-friendly UI
+* 🧠 Deep Learning (LSTM / BERT) integration
+* 🔔 Real-time news API integration
+* 📊 Confidence score display
 
-Developed by Divyadharshini
+---
 
-⭐ Support
+## 🌍 Use Cases
 
-If you like this project, give it a ⭐ on GitHub.
+* News verification platforms
+* Social media monitoring tools
+* Educational AI projects
+* Browser extensions for fact-checking
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+Developed by Divyadharshini R
+---
+
+## ⭐ Support
+
+If you found this useful, consider giving it a ⭐ on GitHub!
